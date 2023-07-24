@@ -13,6 +13,7 @@ It is not mandatory but is highly recommendable. The latest projects created on 
 ### 4. How can I write comments in JSX?
 
 ### 5. What is <React.Fragment></React.Fragment> and <></> ?
+Wrap elements in <Fragment> to group them together in situations where you need a single element. Grouping elements in Fragment has no effect on the resulting DOM; it is the same as if the elements were not grouped. The empty JSX tag <></> is shorthand for <Fragment></Fragment> in most cases.
 
 ### 6. What is Virtual DOM?
 
@@ -22,7 +23,7 @@ It is not mandatory but is highly recommendable. The latest projects created on 
 ### 8. What is React Fiber?
 
 ### 9. Why we need keys in React? When do we need keys in React?
-
+The "key" in React is used to uniquely identify elements in a list of components or elements rendered by a loop. It helps React efficiently update and re-render only the necessary components when the list changes.
 
 ### 10 Can we use index as keys in React?
 
