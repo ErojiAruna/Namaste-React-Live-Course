@@ -1,0 +1,64 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  /*margin: 10px;*/
+  border: 2px solid black;
+}
+
+.nav__items {
+  padding: 0px 20px;
+}
+
+.nav__items > ul {
+  font-size: 24px;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav__items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 20%;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.restaurant__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search {
+  padding: 10px;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 400px;
+  background: lightgray;
+  margin: 20px;
+}
+
+.error {
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  display: block;
+}
+.menu {
+  display: block;
+}
