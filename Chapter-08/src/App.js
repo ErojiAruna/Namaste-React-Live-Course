@@ -1,9 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// Default import
-//import Header from './components/Header';
-// Named import
-
 import Header from './components/Header';
 import Body from './components/Body';
 import Footer from './components/Footer';
@@ -11,7 +7,8 @@ import About from './components/About';
 import Error from './components/Error';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Contact from './components/Contact';
-//import RestaurantMenu from './components/RestaurantMenu';
+import RestaurantMenu from './components/RestaurantMenu';
+import Profile from './components/Profile';
 
 const AppLayout = () => {
   return (
@@ -41,10 +38,10 @@ const appRouter = createBrowserRouter([
         path: '/contact',
         element: <Contact />,
       },
-      // {
-      //   path: '/restaurant/:resId',
-      //   element: <RestaurantMenu />,
-      // },
+      {
+        path: '/restaurant/:resId',
+        element: <RestaurantMenu />,
+      },
     ],
   },
 ]);

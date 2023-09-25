@@ -4,14 +4,7 @@ import RestaurantCard from './RestaurantCard';
 import { GET_RES_API } from '../config';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
-
-function filterData(searchText, restaurants) {
-  const filterData = restaurants.filter((restaurant) =>
-    restaurant?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase())
-  );
-
-  return filterData;
-}
+import { filterData } from '../../utils/helper';
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -35,16 +28,6 @@ const Body = () => {
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
-
-  // Conditional Rendering
-  // if restaurant is empty => shimmer Ui
-  // if restaurant has data => actual data UI
-
-  // not render component (Early return)
-  //if (!allRestaurants) return null;
-
-  // if (filteredRestaurants?.length === 0)
-  //   return <h1>No Restaurant match your Filter!!</h1>;
 
   return allRestaurants?.length === 0 ? (
     <Shimmer />
@@ -79,7 +62,7 @@ const Body = () => {
             to={'/restaurant/' + restaurant?.info.id}
             key={restaurant?.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            <RestaurantCard {...restaurant?.info} />
           </Link>
         ))}
       </div>
